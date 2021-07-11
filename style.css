@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    scroll-behavior: smooth;
+}
+/* Spinner */
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(90deg, #EEDE50 0%,#fff 100% );
+    animation: spin .5s infinite linear;
+}
+.spinner:after {
+    width: 90%;
+    height: 90%;
+    background-color: #151515;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+p
+{
+    font-weight: 300;
+    color: #111;
+}
+.banner
+{
+    position:relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(Images/bg6.jpg);
+    background-size: cover;
+}
+
+.banner .content
+{
+    max-width: 900px;
+    text-align: center;
+}
+.banner .content h2
+{
+    font-size: 5em;
+    color: #fff;
+    display: inline;
+   
+}
+.banner .content p
+{
+    font-size: lem;
+    color: #fff
+}
+
+/* Typewriting effect */
+.body {
+    box-sizing: border-box; 
+}
+.typing {
+  position: relative;
+  margin-left: 10px;
+}
+.typing::after {
+    content: "";
+    position: absolute;
+    right: -5px;    
+    width: 1px;
+    height: 80%;
+    border-right: 2px solid #fff;
+    animation: blink 0.5s infinite ease;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.btn
+{
+    font-size: lem;
+    color: rgb(17, 17, 17);
+    background: #eede50;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.btn:hover
+{
+    letter-spacing: 6px;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky
+{
+    background: rgb(255, 255, 255);
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+header .logo
+{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header.sticky .logo
+{
+    color: #111;
+}
+    header .logo span
+{
+    color: #eede50;
+}
+header .navigation
+{
+color: #eede50;
+}
+header .navigation
+{
+    position: relative;
+    display: flex;
+}
+header .navigation li
+{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navigation li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+header.sticky .navigation li a
+{
+    color: #111;
+}
+header .navigation li a:hover
+{
+    color: #eede50;
+}
+section
+{
+    padding: 100px;
+}
+.row
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.row .col50
+{
+    position: relative;
+    width: 48%;
+}
+.titleText
+{
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+    font-weight: bold;
+}
+.titleText span
+{
+    color: #eede50;
+    font-weight: 700;
+    font-size: 1.5em;
+
+}
+.row .col50 .imgBx
+{
+    
+    position: relative;
+    width: 100%;
+    /*min-height: 300px;*/
+    height: 100%;
+    filter: grayscale(1);
+}
+.row .col50 .imgBx:hover
+{
+    filter: grayscale(0);
+}
+.row .col50 .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu .content
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.menu .content .box
+{
+    width: 340px;
+    margin: 20px;
+    border: 15px solid rgb(252, 243, 205);
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+}
+.menu .content .box .imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.menu .content .box .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu .content .box .text
+{
+    padding: 15px 0 5px;
+    text-align: center;
+}
+.menu .content .box h3
+{
+    font-weight: 400;
+    color: #111;
+}
+.chefs .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.chefs .content .box
+{
+    width: 250px;
+    margin: 15px;
+    border: 15px solid rgb(252, 243, 205);
+}
+.chefs .content .box .imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.chefs .content .box .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.chefs .content .box .text
+{
+    padding: 15px 0 5px;
+    text-align: center;
+}
+.chefs .content .box .text h3
+{
+    font-weight: 400;
+    color: #111;
+}
+.comment
+{
+    background: url(Images/bg3.jpeg);
+    background-size: cover;
+}
+.white .titleText,
+.white p
+{
+    color: #fff;
+}
+.comment .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+    text-align: center;
+}
+.comment .content .box
+{
+    width: 340px;
+    margin: 20px;
+    padding: 40px;
+    background: rgb(250, 247, 232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.comment .content .box .imgBx
+{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.comment .content .box .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.comment .content .box .text
+{
+   text-align: center; 
+}
+.comment .content .box .text p
+{
+color: #666;
+font-style: italic;
+}
+.comment .content .box .text h3
+{
+    margin-top: 20px;
+    color: #111;
+    font-size: 1em;
+    color: #6e693e;
+    font-weight: 600;
+}
+.contact
+{
+    background: url(Images/bg9.jpeg);
+    background-size: cover;
+}
+.contact h3
+{
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+.contactForm
+{
+    padding: 75px 50px;
+    background: rgb(250, 247, 232);
+    box-shadow:  0 15px 50px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-top: 50px;
+}
+.contactForm h3
+{
+    color: #111;
+    font-size:  1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+ .contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea, .contactForm .inputBox .submit
+{
+    width:  100%;
+    border:  1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.contactForm .submit 
+{
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    background: #eede50;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+  
+}
+
+.copyrightText
+{
+   padding: 8px 40px;
+   border-top: 1px solid rgba(0,0,0,0.1); 
+   text-align: center;
+}
+.copyrightText p
+{
+    color: #333;
+}
+.copyrightText a
+{
+    color: #5a4e08;
+    font-weight: 500;
+    text-decoration: none;
+}
+@media (max-width: 991px)
+{
+    header,
+    header .sticky
+    {
+    padding: 10px 20px;
+    }
+}
+section
+{
+    padding: 50px
+}
+.banner .content h2
+{
+font-size: 3em;
+color: #fff;
+}
+
+
+
+
+
