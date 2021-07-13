@@ -1,5 +1,5 @@
 
-//Header
+//Navbar
 window.addEventListener('scroll', function(){
     const header = document.querySelector('header');
     header.classList.toggle("sticky", window.scrollY > 0);
@@ -47,7 +47,7 @@ $(document).ready(function () {
       event.preventDefault()
       statusElm.append('<div>Subject is not valid</div>')
     }
-    if (message.length >= 20) {
+    if (message.length >= 10) {
       statusElm.append('<div>Message is valid</div>')
     } else {
       event.preventDefault()
